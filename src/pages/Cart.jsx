@@ -1,6 +1,7 @@
 import React from "react";
 import useCart from "../Cartago/useCart";
 import productsState from "../stores/products/atom";
+import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import {
   Container,
@@ -39,10 +40,8 @@ function Cart() {
             <HStack spacing="8">
               <Box key={product.id} justifyItems="center" alignItems="center">
                 <Image
-                  objectFit="contain"
-                 
-                  height="2rem"
-                  width="2rem"
+                
+                  height={"100px"}
                   src={product.image}
                   alt={product.title}
                 />
@@ -91,15 +90,16 @@ function Cart() {
 
   return (
     <Box>
+      <Container >
+        <Link to="../products" component={products}><Button>Back to products</Button></Link>
+      </Container>
       <Text fontSize="25px" textAlign="center" fontWeight="bold">
         Your Cart
       </Text>
       {cart.items.map(getProduct)}
       <Grid textAlign="center"></Grid>
       <Text marginRight={20} textAlign="right">Total $ {getTotal().toFixed(2)}</Text>
-      <Container>
       
-      </Container>
     </Box>
   );
 }

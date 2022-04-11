@@ -15,17 +15,15 @@ function Products() {
     <title>Products</title>
 </Helmet>
     <Box
-      /* maxW="6x1" */
-      /* mx="auto" */
-  
+      
     >
       <Flex alignItems={"center"}>
         <Stack >
           <Text fontSize={"2rem"} align={"center"}>Products</Text>
-          <Heading /* paddingBottom="10" paddingTop="10" */ textAlign="center">
+          <Heading  textAlign="center">
            
           </Heading>
-          <SimpleGrid columns={3} alignitems={"center"}/* gridColumn="2" */>
+          <SimpleGrid columns={3} alignitems={"center"}>
             {products.map((product) => {
              
               return (

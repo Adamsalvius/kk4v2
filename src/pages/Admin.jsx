@@ -71,12 +71,19 @@ function Admin() {
        <Helmet>
     <title>Admin log</title>
 </Helmet>
-      <Link to="profile"></Link>
+     
       <Heading align="center"> Admin log </Heading>
+      
       <Menu>
-<MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    
+      <MenuButton align="left"as={Button} rightIcon={<ChevronDownIcon />}>
    Users
   </MenuButton>
+  
+  <Box align="center">
+  
+  <Link flex="1"to="../profile" align={"center"}><Button align="center">to profile</Button></Link>
+  </Box>
   <MenuList key={users}>
 {users.map((user) => {
         return (

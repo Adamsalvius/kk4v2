@@ -25,10 +25,7 @@ function Navbar() {
           as={Link}
           to="/"
           alt="logo"
-          color="#000000"
-          textAlign={"center"}
-          /* fontSize="3rem" */
-          /* marginRight="4" */
+        
         >
           <Image
             boxSize="100px"
@@ -49,7 +46,7 @@ function Navbar() {
     <MenuItem><Link to="/login">Login</Link></MenuItem>
     <MenuItem><Link to="/register">Register</Link></MenuItem>
     <MenuItem><Link to="/profile">Profile</Link></MenuItem>
-    {/* <MenuItem><Link to="/admin">Admin</Link></MenuItem> */}
+    
   
   </MenuList>
 </Menu>
